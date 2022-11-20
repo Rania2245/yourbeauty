@@ -10,11 +10,23 @@ import { ServiceService } from 'src/app/services/service.service';
 export class ProduitComponent implements OnInit {
   aux: boolean = false;
   lesProduits!: Produits[];
+
   constructor(private produitService: ServiceService) {}
 
   ngOnInit(): void {
     this.produitService
       .getProduits()
       .subscribe((data) => (this.lesProduits = data));
+  }
+  ajoutPanier(produit: Produits) {
+    const panier = localStorage.getItem('panier');
+    if (panier === null) {
+      const newpanier: Produits[] = [produit];
+      localStorage.setItem('panier', JSON.stringify(newpanier));
+    } else {
+      const parsedpanier = JSON.parse(panier);
+      parsedpanier.push(produit);
+      localStorage.setItem('panier', JSON.stringify(parsedpanier));
+    }
   }
 }

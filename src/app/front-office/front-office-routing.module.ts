@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ErreurComponent } from './erreur/erreur.component';
 import { HomeComponent } from './home/home.component';
-import { PanierComponent } from './panier/PanierComponent.1';
+import { PanierComponent } from './panier/panier.component';
+
 import { ProduitComponent } from './produit/produit.component';
 import { SelectedproduitComponent } from './selectedproduit/selectedproduit.component';
 import { YourbeautyComponent } from './yourbeauty/yourbeauty.component';

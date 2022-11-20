@@ -1,2 +1,15 @@
 <app-navbar></app-navbar>
-<p>panier works!</p>
+
+<ul class="list-group">
+  <li
+    *ngFor="let produit of panier; let i = index"
+    class="list-group-item list-group-item-secondary"
+  >
+    <img [src]="produit.img" id="c1" />
+    {{ produit.id }}
+    {{ produit.reference }}
+    {{ produit.marque }}
+    {{ produit.prix }}
+    <button (click)="supprimerProduit(i)">Supprimer</button>
+  </li>
+</ul>

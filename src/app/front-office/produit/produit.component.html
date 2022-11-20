@@ -2,23 +2,23 @@
 <h1>Nos Produits</h1>
 <ul class="list-group">
   <li
-    *ngFor="let tab of lesProduits"
+    *ngFor="let produit of lesProduits"
     class="list-group-item list-group-item-secondary"
   >
-    <img [src]="tab.img" id="c1" />
-    {{ tab.id }}
-    {{ tab.reference }}
-    {{ tab.marque }}
-    {{ tab.prix }}
-    <ng-container *ngIf="tab.dispo"> En Stock</ng-container
-    ><ng-container *ngIf="tab.dispo == false"> Hors Stock </ng-container>
+    <img [src]="produit.img" id="c1" />
+    {{ produit.id }}
+    {{ produit.reference }}
+    {{ produit.marque }}
+    {{ produit.prix }}
+    <ng-container *ngIf="produit.dispo"> En Stock</ng-container
+    ><ng-container *ngIf="produit.dispo == false"> Hors Stock </ng-container>
 
     <a
       class="btn btn-primary btn-sm"
-      [routerLink]="['/selectedproduit', tab.id]"
+      [routerLink]="['/selectedproduit', produit.id]"
       ><i class="fa-solid fa-info"></i> Détail</a
     >
-    <button class="btn btn-secondary btn-lg">
+    <button class="btn btn-secondary btn-lg" (click)="ajoutPanier(produit)">
       <i class="fa-solid fa-cart-plus"></i> J'ACHETE
     </button>
   </li>

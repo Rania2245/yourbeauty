@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BackOfficeModule } from './back-office/back-office.module';
 
-import { PanierComponent } from './front-office/panier/PanierComponent.1';
-
 @NgModule({
   declarations: [AppComponent],
   imports: [

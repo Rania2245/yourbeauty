@@ -8,7 +8,7 @@ import { ProduitComponent } from './produit/produit.component';
 import { YourbeautyComponent } from './yourbeauty/yourbeauty.component';
 import { ErreurComponent } from './erreur/erreur.component';
 import { SelectedproduitComponent } from './selectedproduit/selectedproduit.component';
-import { PanierComponent } from './panier/PanierComponent.1';
+import { PanierComponent } from './panier/panier.component';
 
 @NgModule({
   declarations: [
