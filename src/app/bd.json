@@ -1,0 +1,44 @@
+{
+  "produits": [
+    {
+      "id": 1,
+      "prix": 22,
+      "img": "assets/images/blush-topface.jpg",
+      "libelle": "rich touch blush pt703-004 ",
+      "reference": "8681217241909",
+      "marque": "TopFace",
+      "dispo": "true",
+      "comments": "Il donne à la peau un aspect sain"
+    },
+    {
+      "id": 2,
+      "prix": 15.5,
+      "img": "assets/images/mascara-topface-.jpg",
+      "libelle": "Focus point volume mascara noir",
+      "reference": "8681217228214",
+      "marque": "TopFace",
+      "dispo": "true",
+      "comments": "Laissez vos yeux parler d'eux-mêmes pendant que vous les accentuez avec ceci"
+    },
+    {
+      "id": 3,
+      "prix": 50,
+      "img": "assets/images/maybellin-gloss.gif",
+      "libelle": "Maybelline New York Maybelline",
+      "reference": "003 moon",
+      "marque": "Maybelline ",
+      "dispo": "true",
+      "comments": "Top "
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "nom": "",
+      "date": ""
+    }
+  ],
+  "marque": {
+    "name": "typicode"
+  }
+}
