@@ -16,7 +16,7 @@
       "img": "assets/images/mascara-topface-.jpg",
       "libelle": "Focus point volume mascara noir",
       "reference": "8681217228214",
-      "marque": "TopFace",
+      "marque": { "nom": "TopFace" },
       "dispo": "true",
       "comments": "Laissez vos yeux parler d'eux-mêmes pendant que vous les accentuez avec ceci"
     },

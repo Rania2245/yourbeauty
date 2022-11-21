@@ -8,7 +8,7 @@
     <img [src]="produit.img" id="c1" />
     {{ produit.id }}
     {{ produit.reference }}
-    {{ produit.marque }}
+    {{ produit.marque.nom | uppercase }}
     {{ produit.prix }}
     <ng-container *ngIf="produit.dispo"> En Stock</ng-container
     ><ng-container *ngIf="produit.dispo == false"> Hors Stock </ng-container>

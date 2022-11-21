@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Produits } from 'src/app/classes/produits';
 import { ServiceService } from 'src/app/services/service.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-produit',

@@ -9,7 +9,7 @@
     {{ produit.id }}
     {{ produit.reference }}
     {{ produit.marque }}
-    {{ produit.prix }}
+    {{ produit.prix | currency }}
     <button (click)="supprimerProduit(i)">Supprimer</button>
   </li>
 </ul>

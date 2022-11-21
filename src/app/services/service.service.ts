@@ -12,4 +12,7 @@ export class ServiceService {
   getProduits(): Observable<Produits[]> {
     return this.http.get<Produits[]>(URL);
   }
+  getProduitById(id: number): Observable<Produits> {
+    return this.http.get<Produits>(`${URL}/${id}`);
+  }
 }
