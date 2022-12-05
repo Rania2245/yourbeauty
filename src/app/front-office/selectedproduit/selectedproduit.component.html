@@ -15,11 +15,12 @@
       <div>
         <div class="card-header">{{ produit.description }}</div>
         <div class="card-body">
-          <h5 class="card-title">{{ produit.marque.nom | uppercase }}</h5>
+          <h5 class="card-title">{{ produit.marque | uppercase }}</h5>
 
           Referance : {{ produit.reference }}<br />
-          Prix: {{ produit.prix | currency }}
-          <li *ngFor="let cm of produit.comments">
+          Prix en dollar: {{ produit.prix | currency }} <br />
+          Prix en Dinar: {{ produit.prix | dinar | number : "2.3" }}DT
+          <li *ngFor="let cm of comments">
             {{ cm.msg }}
           </li>
           <button

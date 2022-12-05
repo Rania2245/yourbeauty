@@ -9,19 +9,33 @@ import { ServiceService } from 'src/app/services/service.service';
 })
 export class HomeComponent implements OnInit {
   lesProduits!: Produits[];
+  mot: string = '';
+  produitsAffiches!: Produits[];
 
   constructor(private produitService: ServiceService) {}
 
   ngOnInit(): void {
-    this.produitService
-      .getProduits()
-      .subscribe((data) => (this.lesProduits = data));
+    this.produitService.getProduits().subscribe((data) => {
+      this.lesProduits = data;
+      this.produitsAffiches = data;
+    });
+  }
+
+  Rechercher() {
+    if (this.mot == '') {
+      this.produitsAffiches = this.lesProduits;
+    } else {
+      this.produitsAffiches = this.lesProduits.filter(
+        (data) =>
+          data.marque.toLocaleLowerCase() == this.mot.toLocaleLowerCase()
+      );
+    }
   }
 
   supprimer(produit: Produits, index: number) {
-    console.log(produit);
     this.produitService.supprimerProduit(produit).subscribe(() => {
       this.lesProduits.splice(index, 1);
+      this.produitsAffiches = this.lesProduits;
     });
   }
 }

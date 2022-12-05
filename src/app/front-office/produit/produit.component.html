@@ -1,30 +1,47 @@
 <app-navbar></app-navbar>
-<form class="form-inline">
+
+<h1>Nos Produits<i class="fa-solid fa-bars"></i></h1>
+<div>
   <input
     [(ngModel)]="mot"
     class="form-control mr-sm-2"
     style="width: 170px; display: inline"
     type="search"
-    placeholder="Search"
+    placeholder="Marque"
     aria-label="Search"
   />
   <button
-    (click)="getwithfilter()"
+    (click)="filterMarque()"
     class="btn btn-outline-success my-2 my-sm-0"
     type="submit"
   >
     Search
   </button>
-</form>
-<h1>Nos Produits<i class="fa-solid fa-bars"></i></h1>
-
+</div>
+<div>
+  <input
+    [(ngModel)]="prix"
+    class="form-control mr-sm-2"
+    style="width: 170px; display: inline"
+    type="search"
+    placeholder="Prix"
+    aria-label="Search"
+  />
+  <button
+    (click)="filterPrix()"
+    class="btn btn-outline-success my-2 my-sm-0"
+    type="submit"
+  >
+    Search
+  </button>
+</div>
 <div class="container mt-4 mb-4">
   <div class="row">
-    <div *ngFor="let produit of lesProduits" class="col-lg-3">
+    <div *ngFor="let produit of produitsAffiches" class="col-lg-3">
       <img [src]="produit.img" id="c1" />
 
       {{ produit.description | uppercase }}<br />
-      Le Prix :{{ produit.prix | dinar | number: "2.3" }} DT <br />
+      Le Prix :{{ produit.prix | currency }} <br />
 
       <ng-container *ngIf="produit.dispo"> En Stock</ng-container
       ><ng-container *ngIf="produit.dispo === false"> Hors Stock </ng-container

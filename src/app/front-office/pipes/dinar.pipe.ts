@@ -5,6 +5,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DinarPipe implements PipeTransform {
   transform(prix: number): number {
-    return prix / 3.8;
+    return prix * 3.2;
   }
 }

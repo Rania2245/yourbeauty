@@ -2,14 +2,13 @@
   "produits": [
     {
       "id": 1,
-      "prix": 500,
+      "prix": 100,
       "img": "assets/images/hudabeautypalette.JPG",
       "description": "Palette De Fards À Paupière ",
       "reference": "868121724868",
       "dispo": true,
-      "marque": {
-        "nom": "HUDABEAUTY"
-      }
+      "marque": "HUDABEAUTY",
+      "comments": [1]
     },
     {
       "id": 2,
@@ -17,9 +16,7 @@
       "img": "assets/images/blush-topface.jpg",
       "description": "rich touch blush pt703-004 ",
       "reference": "8681217241909",
-      "marque": {
-        "nom": "TopFace"
-      },
+      "marque": "TopFace",
       "dispo": true,
       "comments": [2]
     },
@@ -29,9 +26,7 @@
       "img": "assets/images/mascara-topface-.jpg",
       "description": "Focus point volume mascara noir",
       "reference": "8681217228214",
-      "marque": {
-        "nom": "TopFace"
-      },
+      "marque": "TopFace",
       "dispo": true,
       "comments": [3]
     },
@@ -41,9 +36,7 @@
       "img": "assets/images/maybellin-gloss.gif",
       "description": "Maybelline New York Maybelline",
       "reference": "003 moon",
-      "marque": {
-        "nom": "Maybelline"
-      },
+      "marque": "Maybelline",
       "dispo": true,
       "comments": [4]
     },
@@ -53,9 +46,7 @@
       "img": "assets/images/ROUGE-ARTIST-FOR-EVER-MATTE.png",
       "description": "ROUGE À LÈVRES LIQUIDE MAT LONGUE TENUE",
       "reference": "192-",
-      "marque": {
-        "nom": "Maybelline"
-      },
+      "marque": "Maybelline",
       "dispo": true,
       "comments": [5]
     },
@@ -65,9 +56,7 @@
       "img": "assets/images/fond-makeup-forever.JPG",
       "description": "Fond De Teint Longue Tenue Imperceptible",
       "reference": "86885624868",
-      "marque": {
-        "nom": "MAKE UP FOR EVER"
-      },
+      "marque": "MAKE UP FOR EVER",
       "dispo": false,
       "comments": [6]
     },
@@ -77,9 +66,7 @@
       "img": "assets/images/fitme.jpg",
       "description": "Maybelline New York Fit Me! - Fond de Teint Matte - 115 Ivoire",
       "reference": "8500624868",
-      "marque": {
-        "nom": "Maybelline"
-      },
+      "marque": "Maybelline",
       "dispo": false,
       "comments": [7, 10]
     },
@@ -89,9 +76,7 @@
       "img": "assets/images/doris.jpg",
       "description": "Doris Tint Solution Colorante Lèvres & Joues Rouge - 12 Ml",
       "reference": "10024868",
-      "marque": {
-        "nom": "Doris"
-      },
+      "marque": "Doris",
       "dispo": false,
       "comments": [8, 9]
     }

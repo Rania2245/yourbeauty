@@ -1,9 +1,27 @@
 <h1>Mes Produits <i class="fa-solid fa-bars"></i></h1>
 
+<div>
+  <input
+    [(ngModel)]="mot"
+    class="form-control mr-sm-2"
+    style="width: 170px; display: inline"
+    type="search"
+    placeholder="Search"
+    aria-label="Search"
+  />
+  <button
+    (click)="Rechercher()"
+    class="btn btn-outline-success my-2 my-sm-0"
+    type="submit"
+  >
+    Search
+  </button>
+</div>
+
 <div class="container mt-4 mb-4">
   <div class="row">
     <div
-      *ngFor="let produit of lesProduits; let index = index"
+      *ngFor="let produit of produitsAffiches; let index = index"
       class="col-lg-3"
     >
       <img [src]="produit.img" id="c1" />

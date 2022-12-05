@@ -11,14 +11,18 @@ import { ServiceService } from 'src/app/services/service.service';
 export class ProduitComponent implements OnInit {
   aux: boolean = false;
   lesProduits!: Produits[];
+  produitsAffiches!: Produits[];
   mot: string = '';
+  prix!: number;
   constructor(private produitService: ServiceService) {}
 
   ngOnInit(): void {
-    this.produitService
-      .getProduits()
-      .subscribe((data) => (this.lesProduits = data));
+    this.produitService.getProduits().subscribe((data) => {
+      this.lesProduits = data;
+      this.produitsAffiches = data;
+    });
   }
+
   ajoutPanier(produit: Produits) {
     const panier = localStorage.getItem('panier');
     if (panier === null) {
@@ -30,16 +34,22 @@ export class ProduitComponent implements OnInit {
       localStorage.setItem('panier', JSON.stringify(parsedpanier));
     }
   }
-  getwithfilter() {
-    alert(this.mot);
+  filterMarque() {
     if (this.mot == '') {
-      this.produitService.getProduits().subscribe((data) => {
-        this.lesProduits = data;
-      });
+      this.produitsAffiches = this.lesProduits;
     } else {
-      this.lesProduits = this.lesProduits.filter(
+      this.produitsAffiches = this.lesProduits.filter(
         (data) =>
-          data.marque.nom.toLocaleLowerCase() == this.mot.toLocaleLowerCase()
+          data.marque.toLocaleLowerCase() == this.mot.toLocaleLowerCase()
+      );
+    }
+  }
+  filterPrix() {
+    if (this.prix.toString() == '') {
+      this.produitsAffiches = this.lesProduits;
+    } else {
+      this.produitsAffiches = this.lesProduits.filter(
+        (data) => data.prix < this.prix
       );
     }
   }

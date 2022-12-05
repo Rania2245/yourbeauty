@@ -1,5 +1,4 @@
 import { Commentaire } from './commentaire';
-import { Marque } from './marque';
 
 export class Produits {
   constructor(
@@ -9,7 +8,7 @@ export class Produits {
     public description: string,
     public reference: string,
     public dispo: boolean,
-    public marque: Marque,
+    public marque: string,
     public comments: Commentaire[]
   ) {}
 }

@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { AjoutproduitComponent } from './ajoutproduit/ajoutproduit.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ModifierProduitComponent } from './modifier-produit/modifier-produit.component';
 
@@ -19,8 +19,13 @@ import { ModifierProduitComponent } from './modifier-produit/modifier-produit.co
     AjoutproduitComponent,
 
     DashboardComponent,
-     ModifierProduitComponent,
+    ModifierProduitComponent,
   ],
-  imports: [CommonModule, BackOfficeRoutingModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    BackOfficeRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
 })
 export class BackOfficeModule {}

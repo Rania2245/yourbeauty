@@ -13,8 +13,8 @@
     >
       <img [src]="produit.img" id="c1" />
 
-      Referance : {{ produit.reference }} La Marque :
-      {{ produit.marque.nom }} Prix: {{ produit.prix | currency }}
+      Referance : {{ produit.reference }} La Marque : {{ produit.marque }} Prix:
+      {{ produit.prix | currency }}
       <button class="btn btn-outline-dark" (click)="supprimerProduit(i)">
         <i class="fa-solid fa-xmark"></i>
         Supprimer

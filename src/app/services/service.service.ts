@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { Produits } from '../classes/produits';
 import { Commentaire } from '../classes/commentaire';
 import { User } from '../classes/user';
-import { Marque } from '../classes/marque';
 
 const URL = 'http://localhost:3000/';
 
@@ -21,9 +20,6 @@ export class ServiceService {
   }
   getComments(): Observable<Commentaire[]> {
     return this.http.get<Commentaire[]>(`${URL}comments`);
-  }
-  getMarque(): Observable<Marque[]> {
-    return this.http.get<Marque[]>(`${URL}marque`);
   }
 
   addProduit(produit: Produits): Observable<Produits> {
