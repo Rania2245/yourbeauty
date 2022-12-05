@@ -6,7 +6,7 @@ export class Produits {
     public id: number,
     public prix: number,
     public img: string,
-    public libelle: string,
+    public description: string,
     public reference: string,
     public dispo: boolean,
     public marque: Marque,

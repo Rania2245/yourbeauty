@@ -1,7 +1,35 @@
 <app-navbar></app-navbar>
 
-<img [src]="produit.img" id="c1" />
-{{ produit.id }}
-{{ produit.reference }}
-{{ produit.marque.nom | uppercase }}
-{{ produit.prix }}roduits"
+<div
+  class="bg-image"
+  style="
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?w=360');
+    height: 100vh;
+  "
+>
+  <div class="row">
+    <div class="col-4">
+      <img [src]="produit.img" id="c1" class="border border-primary" />
+    </div>
+    <div class="col-4">
+      <div>
+        <div class="card-header">{{ produit.description }}</div>
+        <div class="card-body">
+          <h5 class="card-title">{{ produit.marque.nom | uppercase }}</h5>
+
+          Referance : {{ produit.reference }}<br />
+          Prix: {{ produit.prix | currency }}
+          <li *ngFor="let cm of produit.comments">
+            {{ cm.msg }}
+          </li>
+          <button
+            class="btn btn-outline-secondary"
+            (click)="ajoutPanier(produit)"
+          >
+            <i class="fa-solid fa-cart-plus"></i> J'ACHETE
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

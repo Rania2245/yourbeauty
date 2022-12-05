@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ErreurComponent } from './erreur/erreur.component';
 import { HomeComponent } from './home/home.component';
+
 import { PanierComponent } from './panier/panier.component';
 
-import { ProduitComponent } from './produit/produit.component';
+import { ProduitComponent } from './produit/Produit.component';
 import { SelectedproduitComponent } from './selectedproduit/selectedproduit.component';
 import { YourbeautyComponent } from './yourbeauty/yourbeauty.component';
 
@@ -21,9 +21,9 @@ const routes: Routes = [
     title: 'votre panier ',
     component: PanierComponent,
   },
+
   { path: 'yourbeauty', title: 'yourbeauty', component: YourbeautyComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', title: 'Erreur', component: ErreurComponent },
 ];
 
 @NgModule({

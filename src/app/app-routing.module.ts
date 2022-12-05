@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ErreurComponent } from './front-office/erreur/erreur.component';
+import { ErreurComponent } from './erreur/erreur.component';
 import { HomeComponent } from './front-office/home/home.component';
-import { ProduitComponent } from './front-office/produit/produit.component';
+import { ProduitComponent } from './front-office/produit/Produit.component';
 import { SelectedproduitComponent } from './front-office/selectedproduit/selectedproduit.component';
 import { YourbeautyComponent } from './front-office/yourbeauty/yourbeauty.component';
 
@@ -21,6 +21,7 @@ const routes: Routes = [
         (m) => m.BackOfficeModule
       ),
   },
+  { path: '**', title: 'Erreur', component: ErreurComponent },
 ];
 
 @NgModule({

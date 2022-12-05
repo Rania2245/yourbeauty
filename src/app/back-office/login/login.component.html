@@ -1,0 +1,21 @@
+<div class="login">
+  <h3 class="login-header">Log in</h3>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <input type="email" placeholder="Email" formControlName="email" />
+    <div
+      *ngIf="email && email.invalid && email.dirty"
+      class="alert alert-danger"
+    >
+      Mail invalid
+    </div>
+    <div class="help-block"></div>
+
+    <input
+      type="password"
+      placeholder="Password"
+      formControlName="password"
+    /><br />
+
+    <input type="submit" value="Log in" />
+  </form>
+</div>

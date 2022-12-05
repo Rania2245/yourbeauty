@@ -1,0 +1,42 @@
+<div class="container">
+  <h3>Ajout Produit</h3>
+  <form novalidate [formGroup]="productForm" (ngSubmit)="ajouterProduit()">
+    <div>
+      <label>Prix du Produit </label>
+      <input class="form-control" type="number" formControlName="prix" />
+    </div>
+    <div>
+      <label>Image du Produit </label>
+      <input class="form-control" type="text" formControlName="img" />
+    </div>
+    <div>
+      <label>Description du Produit </label>
+      <input class="form-control" type="text" formControlName="description" />
+    </div>
+    <div>
+      <label>Referance du Produit </label>
+      <input class="form-control" type="text" formControlName="reference" />
+    </div>
+    <div>
+      <label>Disponibilte du Produit </label>
+      <input class="form-control" type="text" formControlName="dispo" />
+    </div>
+    <div>
+      <label>Marque du Produit </label>
+      <input class="form-control" type="text" formControlName="marque" />
+    </div>
+
+    <input
+      type="submit"
+      [disabled]="productForm.invalid"
+      class="btn btn-success"
+      value="Ajouter"
+    />
+    <input
+      type="button"
+      class="btn btn-danger"
+      value="Vider"
+      (click)="onVider()"
+    />
+  </form>
+</div>

@@ -1,25 +1,43 @@
 <app-navbar></app-navbar>
-<h1>Nos Produits</h1>
-<ul class="list-group">
-  <li
-    *ngFor="let produit of lesProduits"
-    class="list-group-item list-group-item-secondary"
+<form class="form-inline">
+  <input
+    [(ngModel)]="mot"
+    class="form-control mr-sm-2"
+    style="width: 170px; display: inline"
+    type="search"
+    placeholder="Search"
+    aria-label="Search"
+  />
+  <button
+    (click)="getwithfilter()"
+    class="btn btn-outline-success my-2 my-sm-0"
+    type="submit"
   >
-    <img [src]="produit.img" id="c1" />
-    {{ produit.id }}
-    {{ produit.reference }}
-    {{ produit.marque.nom | uppercase }}
-    {{ produit.prix }}
-    <ng-container *ngIf="produit.dispo"> En Stock</ng-container
-    ><ng-container *ngIf="produit.dispo == false"> Hors Stock </ng-container>
+    Search
+  </button>
+</form>
+<h1>Nos Produits<i class="fa-solid fa-bars"></i></h1>
 
-    <a
-      class="btn btn-primary btn-sm"
-      [routerLink]="['/selectedproduit', produit.id]"
-      ><i class="fa-solid fa-info"></i> Détail</a
-    >
-    <button class="btn btn-secondary btn-lg" (click)="ajoutPanier(produit)">
-      <i class="fa-solid fa-cart-plus"></i> J'ACHETE
-    </button>
-  </li>
-</ul>
+<div class="container mt-4 mb-4">
+  <div class="row">
+    <div *ngFor="let produit of lesProduits" class="col-lg-3">
+      <img [src]="produit.img" id="c1" />
+
+      {{ produit.description | uppercase }}<br />
+      Le Prix :{{ produit.prix | dinar | number: "2.3" }} DT <br />
+
+      <ng-container *ngIf="produit.dispo"> En Stock</ng-container
+      ><ng-container *ngIf="produit.dispo === false"> Hors Stock </ng-container
+      ><br />
+
+      <a
+        class="btn btn-outline-success"
+        [routerLink]="['/selectedproduit', produit.id]"
+        ><i class="fa-solid fa-info"></i> Détail</a
+      >
+      <button class="btn btn-outline-secondary" (click)="ajoutPanier(produit)">
+        <i class="fa-solid fa-cart-plus"></i> J'ACHETE
+      </button>
+    </div>
+  </div>
+</div>

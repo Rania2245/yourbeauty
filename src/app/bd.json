@@ -2,43 +2,180 @@
   "produits": [
     {
       "id": 1,
-      "prix": 22,
-      "img": "assets/images/blush-topface.jpg",
-      "libelle": "rich touch blush pt703-004 ",
-      "reference": "8681217241909",
-      "marque": "TopFace",
-      "dispo": "true",
-      "comments": "Il donne à la peau un aspect sain"
+      "prix": 500,
+      "img": "assets/images/hudabeautypalette.JPG",
+      "description": "Palette De Fards À Paupière ",
+      "reference": "868121724868",
+      "dispo": true,
+      "marque": {
+        "nom": "HUDABEAUTY"
+      }
     },
     {
       "id": 2,
-      "prix": 15.5,
-      "img": "assets/images/mascara-topface-.jpg",
-      "libelle": "Focus point volume mascara noir",
-      "reference": "8681217228214",
-      "marque": { "nom": "TopFace" },
-      "dispo": "true",
-      "comments": "Laissez vos yeux parler d'eux-mêmes pendant que vous les accentuez avec ceci"
+      "prix": 22,
+      "img": "assets/images/blush-topface.jpg",
+      "description": "rich touch blush pt703-004 ",
+      "reference": "8681217241909",
+      "marque": {
+        "nom": "TopFace"
+      },
+      "dispo": true,
+      "comments": [2]
     },
     {
       "id": 3,
+      "prix": 15.5,
+      "img": "assets/images/mascara-topface-.jpg",
+      "description": "Focus point volume mascara noir",
+      "reference": "8681217228214",
+      "marque": {
+        "nom": "TopFace"
+      },
+      "dispo": true,
+      "comments": [3]
+    },
+    {
+      "id": 4,
       "prix": 50,
       "img": "assets/images/maybellin-gloss.gif",
-      "libelle": "Maybelline New York Maybelline",
+      "description": "Maybelline New York Maybelline",
       "reference": "003 moon",
-      "marque": "Maybelline ",
-      "dispo": "true",
-      "comments": "Top "
+      "marque": {
+        "nom": "Maybelline"
+      },
+      "dispo": true,
+      "comments": [4]
+    },
+    {
+      "id": 5,
+      "prix": 50,
+      "img": "assets/images/ROUGE-ARTIST-FOR-EVER-MATTE.png",
+      "description": "ROUGE À LÈVRES LIQUIDE MAT LONGUE TENUE",
+      "reference": "192-",
+      "marque": {
+        "nom": "Maybelline"
+      },
+      "dispo": true,
+      "comments": [5]
+    },
+    {
+      "id": 6,
+      "prix": 200,
+      "img": "assets/images/fond-makeup-forever.JPG",
+      "description": "Fond De Teint Longue Tenue Imperceptible",
+      "reference": "86885624868",
+      "marque": {
+        "nom": "MAKE UP FOR EVER"
+      },
+      "dispo": false,
+      "comments": [6]
+    },
+    {
+      "id": 7,
+      "prix": 200,
+      "img": "assets/images/fitme.jpg",
+      "description": "Maybelline New York Fit Me! - Fond de Teint Matte - 115 Ivoire",
+      "reference": "8500624868",
+      "marque": {
+        "nom": "Maybelline"
+      },
+      "dispo": false,
+      "comments": [7, 10]
+    },
+    {
+      "id": 8,
+      "prix": 120,
+      "img": "assets/images/doris.jpg",
+      "description": "Doris Tint Solution Colorante Lèvres & Joues Rouge - 12 Ml",
+      "reference": "10024868",
+      "marque": {
+        "nom": "Doris"
+      },
+      "dispo": false,
+      "comments": [8, 9]
     }
   ],
   "comments": [
     {
       "id": 1,
-      "nom": "",
-      "date": ""
+      "msg": "Il donne à la peau un aspect sain",
+      "date": "11/08/2021",
+      "idProduit": 1
+    },
+    {
+      "id": 2,
+      "nom": "Laissez vos yeux parler d'eux-mêmes pendant que vous les accentuez avec ceci",
+      "date": "11/09/2021",
+      "idProduit": 2
+    },
+    {
+      "id": 3,
+      "msg": "Top ",
+      "date": "11/06/2021",
+      "idProduit": 3
+    },
+    {
+      "id": 4,
+      "msg": "Top ",
+      "date": "11/06/2021",
+      "idProduit": 4
+    },
+    {
+      "id": 5,
+      "msg": "Top ",
+      "date": "11/06/2021",
+      "idProduit": 5
+    },
+    {
+      "id": 6,
+      "msg": "Top ",
+      "date": "11/06/2021",
+      "idProduit": 6
+    },
+    {
+      "id": 7,
+      "msg": "Top ",
+      "date": "11/06/2021",
+      "idProduit": 7
+    },
+    {
+      "id": 8,
+      "msg": "Top ",
+      "date": "11/06/2021",
+      "idProduit": 8
+    },
+    {
+      "id": 9,
+      "msg": "Top ",
+      "date": "11/06/2021",
+      "idProduit": 8
+    },
+    {
+      "id": 10,
+      "msg": "Top ",
+      "date": "11/06/2021",
+      "idProduit": 7
     }
   ],
-  "marque": {
-    "name": "typicode"
-  }
+  "marque": [
+    {
+      "name": "HUDABEAUTY"
+    },
+    {
+      "name": "topface"
+    },
+    {
+      "name": "Maybelline"
+    },
+    {
+      "name": "MAKE UP FOR EVER"
+    }
+  ],
+  "user": [
+    {
+      "email": "email@email.email",
+      "password": "azerty"
+    }
+  ]
 }
